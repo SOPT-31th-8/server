@@ -1,1 +1,7 @@
-export { default as userController } from "./userController";
+import userController from "./userController";
+import itemController from "./itemController";
+
+export {
+    userController,
+    itemController
+};
