@@ -1,12 +1,12 @@
 import { Router } from "express";
 import userRouter from "./userRouter";
 import itemRouter from "./itemRouter";
-import bestRouter from "./bestRouter";
+import bestItemRouter from "./bestItemRouter";
 
 const router: Router = Router();
 
 router.use("/user", userRouter);
 router.use("/item", itemRouter);
-router.use("/item", bestRouter);
+router.use("/bestItem", bestItemRouter);
 
 export default router;

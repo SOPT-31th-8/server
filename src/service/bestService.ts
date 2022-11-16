@@ -12,6 +12,8 @@ const getBestItem = async () => {
             itemId: true
         },
     });
+
+    console.log(bestItems);
      
     if (!bestItems) {
         return null;
