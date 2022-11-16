@@ -7,6 +7,6 @@ const router: Router = Router();
 
 router.use("/user", userRouter);
 router.use("/item", itemRouter);
-router.use("/bestItem", bestItemRouter);
+router.use("/best-item", bestItemRouter);
 
 export default router;
