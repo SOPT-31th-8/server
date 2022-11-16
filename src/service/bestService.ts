@@ -12,8 +12,6 @@ const getBestItem = async () => {
             itemId: true
         },
     });
-
-    console.log(bestItems);
      
     if (!bestItems) {
         return null;
@@ -23,11 +21,11 @@ const getBestItem = async () => {
 
     for(const bestItem of bestItems) {
         new_bestItems.push({
-            "bestItemName": bestItems.itemName,
-		    "bestItemImage" : bestItems.itemImage,
-		    "bestItemPrice": bestItems.itemPrice,
-		    "bestDiscountRate": bestItems.discountRate,
-		    "bestItemId": bestItems.itemId
+            "bestItemName": bestItem.itemName,
+		    "bestItemImage" : bestItem.itemImage,
+		    "bestItemPrice": bestItem.itemPrice,
+		    "bestDiscountRate": bestItem.discountRate,
+		    "bestItemId": bestItem.itemId
         })
     }
 
