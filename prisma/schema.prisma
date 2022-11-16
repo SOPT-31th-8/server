@@ -10,7 +10,7 @@ datasource db {
 model item {
   itemId       Int      @id @default(autoincrement())
   itemName     String   @db.VarChar(20)
-  itemImage    String   @db.VarChar(300)
+  itemImage    String   @db.VarChar(500)
   supplierName String   @db.VarChar(20)
   itemPrice    Int
   starCount    Int?
@@ -24,5 +24,5 @@ model item {
 model live {
   liveId    Int    @id @default(autoincrement())
   liveName  String @db.VarChar(20)
-  liveImage String @db.VarChar(200)
+  liveImage String @db.VarChar(500)
 }
