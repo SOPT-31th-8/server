@@ -5,7 +5,7 @@ const getCustomItem = async () => {
 
     const customItems = await prisma.item.findMany({
         select: {
-            itemName: true,
+            catchphrase: true,
             itemImage: true,
             itemPrice: true,
             discountRate: true,
@@ -21,19 +21,19 @@ const getCustomItem = async () => {
 
     for(const customItem of customItems) {
         new_customItems.push({
-            "bestItemName": customItem.catchphrase,
-		    "bestItemImage" : customItem.itemImage,
-		    "bestItemPrice": customItem.itemPrice,
-		    "bestDiscountRate": customItem.discountRate,
-		    "bestItemId": customItem.itemId
+            "itemName": customItem.catchphrase,
+		    "itemImage" : customItem.itemImage,
+		    "itemPrice": customItem.itemPrice,
+		    "discountRate": customItem.discountRate,
+		    "itemId": customItem.itemId
         })
     }
 
     return new_customItems;
 }
 
-const customController = {
-    getCustomItem
+const customService = {
+    getCustomItem,
 };
 
-export default customController;
+export default customService;
